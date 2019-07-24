@@ -1,2 +1,2 @@
 # JSON-Generator
-JSON Generator 
+Simple JSON Generator
