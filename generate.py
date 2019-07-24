@@ -9,35 +9,37 @@ from faker import Faker
 import re
 import random_object_id
 
-schema = {
-    "_id": '{{objectId()}}',
-    'index': '{{index()}}',
-    'guid': '{{guid()}}',
-    'isActive': '{{bool()}}',
-    'balance': '{{floating(1000, 4000, 2)}}',
-    'picture': 'http://placehold.it/32x32',
-    'age': '{{integer(20, 40)}}',
-    'name': '{{name()}}',
-    'city': '{{city()}}',
-    'state': '{{state()}}',
-    'gender': '{{gender()}}',
-    'company': '{{company().upper()}}',
-    'email': '{{email()}}',
-    'phone': '{{phone()}}',
-    'latitude': '{{floating(-90.000001, 90)}}',
-    'longitude': '{{floating(-180.000001, 180)}}',
-    'tags': [
-        '{{repeat(7)}}',
-        '{{last_name()}}'
-    ],
-    'friends': [
-        '{{repeat(3)}}',
-        {
-            'id': '{{index()}}',
-            'name': '{{name()}}'
-        }
-    ]
-}
+schema = [
+    '{{repeat(1)}}',
+    {
+        "_id": '{{object_id()}}',
+        'guid': '{{guid()}}',
+        'isActive': '{{bool()}}',
+        'eyeColor': '{{choice(["blue", "brown", "green"])}}',
+        'balance': '{{floating(1000, 4000, 2)}}',
+        'picture': 'http://placehold.it/32x32',
+        'age': '{{integer(20, 30)}}',
+        'name': '{{name()}}',
+        'city': '{{city()}}',
+        'state': '{{state()}}',
+        'gender': '{{gender()}}',
+        'company': '{{company().upper()}}',
+        'email': '{{email()}}',
+        'phone': '{{phone()}}',
+        'latitude': '{{floating(-90.000001, 90)}}',
+        'longitude': '{{floating(-180.000001, 180)}}',
+        'tags': [
+            '{{repeat(3, 7)}}',
+            '{{last_name()}}'
+        ],
+        'friends': [
+            '{{repeat(3)}}',
+            {
+                'id': '{{integer()}}',
+                'name': '{{name()}}'
+            }
+        ]
+    }]
 
 
 def generate(schema):
@@ -50,7 +52,11 @@ def generate(schema):
     if type(schema) == list:
         s = schema[0].find('(') + 1
         e = schema[0].find(')')
-        repeat = int(schema[0][s:e])
+        rng = schema[0][s:e].replace(' ', '').split(',')
+        if len(rng) > 1:
+            repeat = random.randint(int(rng[0]), int(rng[1]))
+        else:
+            repeat = int(rng[0])
         lst = []
         for i in range(0, repeat):
             lst.append(generate(schema[1]))
