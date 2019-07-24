@@ -18,6 +18,8 @@ schema = {
     'picture': 'http://placehold.it/32x32',
     'age': '{{integer(20, 40)}}',
     'name': '{{name()}}',
+    'city': '{{city()}}',
+    'state': '{{state()}}',
     'gender': '{{gender()}}',
     'company': '{{company().upper()}}',
     'email': '{{email()}}',
@@ -28,6 +30,13 @@ schema = {
         '{{repeat(7)}}',
         '{{last_name()}}'
     ],
+    'friends': [
+        '{{repeat(3)}}',
+        {
+            'id': '{{index()}}',
+            'name': '{{name()}}'
+        }
+    ]
 }
 
 
