@@ -1,0 +1,32 @@
+[
+  "{{repeat(1)}}",
+  {
+    "_id": "{{object_id()}}",
+    "name": "{{name()}}",
+    "guid": "{{guid()}}",
+    "isActive": "{{bool()}}",
+    "eyeColor": "{{choice([\"blue\", \"brown\", \"green\"])}}",
+    "balance": "{{floating(1000, 4000, 2)}}",
+    "picture": "http://placehold.it/32x32",
+    "age": "{{integer(20, 30)}}",
+    "city": "{{city()}}",
+    "state": "{{state()}}",
+    "gender": "{{gender()}}",
+    "company": "{{company().upper()}}",
+    "email": "{{email()}}",
+    "phone": "{{phone()}}",
+    "latitude": "{{floating(-90.000001, 90)}}",
+    "longitude": "{{floating(-180.000001, 180)}}",
+    "tags": [
+      "{{repeat(3, 7)}}",
+      "{{last_name()}}"
+    ],
+    "friends": [
+      "{{repeat(3)}}",
+      {
+        "id": "{{integer()}}",
+        "name": "{{name()}}"
+      }
+    ]
+  }
+]
