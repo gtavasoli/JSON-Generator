@@ -7,7 +7,14 @@ def generate(template):
     if type(template) == dict:
         obj = {}
         for i in template.keys():
-            obj[i] = generate(template[i])
+            regex = r"^.+\|optional$"
+            matches = re.match(regex, i)
+            if matches is not None:  # Optional
+                si = i.split('|')
+                if random.randint(0, 10) % 2 == 0:  # ToDo: Fixed probability (50%)
+                    obj[si[0]] = generate(template[i])
+            else:
+                obj[i] = generate(template[i])
         return obj
 
     if type(template) == list:

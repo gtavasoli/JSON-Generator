@@ -1,5 +1,5 @@
 [
-  "{{repeat(1)}}",
+  "{{repeat(3)}}",
   {
     "_id": "{{object_id()}}",
     "name": "{{name()}}",

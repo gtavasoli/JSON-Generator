@@ -1,0 +1,20 @@
+{
+  "_id|optional": "{{object_id()}}",
+  "info": {
+    "name": "{{first_name()}}",
+    "location|optional": {
+      "cities": [
+        "Tehran",
+        "Mashhad",
+        "Tabriz"
+      ]
+    }
+  },
+  "friends": [
+    "{{repeat(3, 7)}}",
+    {
+      "id": "{{integer()}}",
+      "name|optional": "{{name()}}"
+    }
+  ]
+}
