@@ -1,8 +1,5 @@
-from faker import Faker
-
-from methods.locale import LOCALE
+from methods import fake
 
 
 def first_name():
-    fake = Faker(LOCALE)
     return fake.first_name()

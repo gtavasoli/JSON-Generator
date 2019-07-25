@@ -1,8 +1,5 @@
-from faker import Faker
-
-from methods.locale import LOCALE
+from methods import fake
 
 
 def company():
-    fake = Faker(LOCALE)
     return fake.company()
