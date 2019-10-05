@@ -34,7 +34,7 @@ For your convenience, we provide a script (main.py) that load template from file
 | Last name | Random last bane | ```last_name()``` | | String |
 
 ## Localization
-
+JSON Generator use [Faker](https://github.com/joke2k/faker) package. Faker can take locale as and argument, to return localized data. You can change it with LOCALE variable in locale.py. Default value for LOCALE is ```en_US```.
 
 ## ToDo
 - Date function
@@ -45,9 +45,10 @@ For your convenience, we provide a script (main.py) that load template from file
 - Random number based on Gaussian distribution (gauss)
 - Clone object (index)
 - Negative random number
-- lorem Ipsum!
-- phone based on locale and format
-- street
+- Lorem Ipsum!
+- Phone based on locale and format
+- Random street
+- Performance Analysis
 
 ## LICENSE
 All of the codebase are MIT licensed unless otherwise specified. 
