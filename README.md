@@ -17,20 +17,21 @@ For your convenience, we provide a script (main.py) that load template from file
 | Name | Description | Usage | Params | Returns |
 | --- | --- | --- | --- | --- |
 | Bool | Random boolean | ```{{bool}}``` | | Boolean |
+| Choice | Returns random item from passed arguments list. | ```{{choice([list])}}``` | ```list``` List of string items | String |
 | City | Random city name | ```{{city}}``` | | String |
 | Company | Random company name | ```{{company}}``` | | String |
 | Country | Random country name | ```{{country}}``` | | String |
-| first_name | Random first name | ```{{first_name}}``` | | String |
+| Email | Randim email | ```email()``` | | String |
+| First name | Random first name | ```{{first_name}}``` | | String |
 | Floating | Random float number in specified range. | ```{{floating([min], [max])}}``` | ```min``` Minimum number of in the range, ```max``` Maximum number in the range | Float |
 | GUID | Random globally unique identifier (UUID4). | ```{{guid()}}``` | | String |
 | Integer | Random integer in specified range. | ```integer([min=0], [max=10])``` | ```min``` Minimum number in the range, ```max``` Maximum number in the range. |
+| Name | Random first name and last name | ```name()``` | | String |
 | Object ID | MongoDB's globally unique identifier for objects. | ```object_id()``` | | String |
 | Phone | Generates random phone number.  | ```Phone()``` | | String |
 | Repeat | Clones next item in specified range of repeats to make an array. Repeatable object must come exactly after repear command in template | ```"{{repeat(min, [max])}}",  'this object will be repeated'``` | ```min``` Minimum number of repeats, ```max``` Maximum number of repeats | Array |
 | State | Random state name. | ```state()``` | | String |
 | Last name | Random last bane | ```last_name()``` | | String |
-| name | Random first name and last name | ```name()``` | | String |
-| email | Randim email | ```email()``` | | String |
 
 ## Localization
 
