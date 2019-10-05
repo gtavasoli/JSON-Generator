@@ -16,18 +16,23 @@ For your convenience, we provide a script (main.py) that load template from file
 
 | Name | Description | Usage | Params | Returns |
 | --- | --- | --- | --- | --- |
-| bool | Random boolean | ```{{bool}}``` | | Boolean |
-| city | Random city name | ```{{city}}``` | | String |
-| company | Random company name | ```{{company}}``` | | String |
-| country | Random country name | ```{{country}}``` | | String |
+| Bool | Random boolean | ```{{bool}}``` | | Boolean |
+| City | Random city name | ```{{city}}``` | | String |
+| Company | Random company name | ```{{company}}``` | | String |
+| Country | Random country name | ```{{country}}``` | | String |
 | first_name | Random first name | ```{{first_name}}``` | | String |
-| floating | Random float number in specified range. | ```{{floating([min], [max])}}``` | ```min``` Minimum number of in the range, ```max``` Maximum number in the range | Float |
-| guid | Random globally unique identifier (UUID4). | ```{{guid()}}``` | | String |
-| integer | Random integer in specified range. | ```integer([min=0], [max=10])``` | ```min``` Minimum number in the range, ```max``` Maximum number in the range. |
-| object_id | MongoDB's globally unique identifier for objects. | ```object_id()``` | | String |
-| phone | Generates random phone number.  | ```Phone()``` | | String |
-| repeat | Clones next item in specified range of repeats to make an array. Repeatable object must come exactly after repear command in template | ```"{{repeat(min, [max])}}",  'this object will be repeated'``` | ```min``` Minimum number of repeats, ```max``` Maximum number of repeats | Array |
+| Floating | Random float number in specified range. | ```{{floating([min], [max])}}``` | ```min``` Minimum number of in the range, ```max``` Maximum number in the range | Float |
+| GUID | Random globally unique identifier (UUID4). | ```{{guid()}}``` | | String |
+| Integer | Random integer in specified range. | ```integer([min=0], [max=10])``` | ```min``` Minimum number in the range, ```max``` Maximum number in the range. |
+| Object ID | MongoDB's globally unique identifier for objects. | ```object_id()``` | | String |
+| Phone | Generates random phone number.  | ```Phone()``` | | String |
+| Repeat | Clones next item in specified range of repeats to make an array. Repeatable object must come exactly after repear command in template | ```"{{repeat(min, [max])}}",  'this object will be repeated'``` | ```min``` Minimum number of repeats, ```max``` Maximum number of repeats | Array |
+| State | Random state name. | ```state()``` | | String |
+| Last name | Random last bane | ```last_name()``` | | String |
+| name | Random first name and last name | ```name()``` | | String |
+| email | Randim email | ```email()``` | | String |
 
+## Localization
 
 
 ## ToDo
@@ -41,6 +46,7 @@ For your convenience, we provide a script (main.py) that load template from file
 - Negative random number
 - lorem Ipsum!
 - phone based on locale and format
+- street
 
 ## LICENSE
 All of the codebase are MIT licensed unless otherwise specified. 
