@@ -6,6 +6,10 @@ JSON Generator has a simple and convenient syntax. JSON Generator allowing users
 
 ## Table of Contents
 - [Usage](#usage)
+- [API](#api)
+- [Localization](#localization)
+- [ToDo](#todo)
+- [Licence](#licence)
 
 ## Usage
 Using of JSON Generator is straightforward. First, you must define your JSON template by our simple API. This template is in JSON format. Then, you must call generate function with your JSON template as input. Generate function makes a random JSON object based on your JSON template as the return value. 
