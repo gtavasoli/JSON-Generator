@@ -49,6 +49,7 @@ JSON Generator use [Faker](https://github.com/joke2k/faker) package. Faker can t
 - Phone based on locale and format
 - Random street
 - Performance Analysis
+- Setup script
 
 ## LICENSE
 All of the codebase are MIT licensed unless otherwise specified. 
