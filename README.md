@@ -22,6 +22,12 @@ For your convenience, we provide a script (main.py) that load template from file
 | country | Random country name | ```{{country}}``` | | String |
 | first_name | Random first name | ```{{first_name}}``` | | String |
 | floating | Random float number in specified range. | ```{{floating([min], [max])}}``` | ```min``` Minimum number of in the range, ```max``` Maximum number in the range | Float |
+| guid | Random globally unique identifier (UUID4). | ```{{guid()}}``` | | String |
+| integer | Random integer in specified range. | ```integer([min=0], [max=10])``` | ```min``` Minimum number in the range, ```max``` Maximum number in the range. |
+| object_id | MongoDB's globally unique identifier for objects. | ```object_id()``` | | String |
+| phone | Generates random phone number.  | ```Phone()``` | | String |
+| repeat | Clones next item in specified range of repeats to make an array. Repeatable object must come exactly after repear command in template | ```"{{repeat(min, [max])}}",  'this object will be repeated'``` | ```min``` Minimum number of repeats, ```max``` Maximum number of repeats | Array |
+
 
 
 ## ToDo
@@ -29,6 +35,12 @@ For your convenience, we provide a script (main.py) that load template from file
 - Time Zone
 - Gender for first name
 - Format for floating
+- Custom function
+- Random number based on Gaussian distribution (gauss)
+- Clone object (index)
+- Negative random number
+- lorem Ipsum!
+- phone based on locale and format
 
 ## LICENSE
 All of the codebase are MIT licensed unless otherwise specified. 
