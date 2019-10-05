@@ -37,6 +37,8 @@ For your convenience, we provide a script (main.py) that load template from file
 | State | Random state name. | ```state()``` | | String |
 | Last name | Random last bane | ```last_name()``` | | String |
 
+Using this syntax ```"field_name|optional"``` in a field name you can make a field as an optional field.
+
 ## Localization
 JSON Generator use [Faker](https://github.com/joke2k/faker) package. Faker can take locale as and argument, to return localized data. You can change it with LOCALE variable in locale.py. Default value for LOCALE is ```en_US```.
 
