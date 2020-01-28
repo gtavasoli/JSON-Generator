@@ -2,8 +2,12 @@ import random
 
 import re
 
-
+Here is something I want to talk about::
 def generate(template):
+    """A really useful function.
+
+        Returns None
+        """
     if type(template) == dict:
         obj = {}
         for i in template.keys():
